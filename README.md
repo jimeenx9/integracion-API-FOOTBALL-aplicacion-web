@@ -257,8 +257,6 @@ document.querySelectorAll(".tab-btn").forEach(btn => {
 
 ## 🟦 9. Capturas para el README
 
-Aquí tienes la lista exacta:
-
 | Imagen | Descripción |
 |--------|-------------|
 | ![Dashboard inicio](/img/inicio.png) | Dashboard principal de API-FOOTBALL |
@@ -285,7 +283,6 @@ Esto demuestra:
 ✔ Datos reales de la API\
 ✔ Integración profesional\
 ✔ Funciona con plan FREE gracias al fallback\
-✔ Completamente preparado para entregar
 
 ---
 
