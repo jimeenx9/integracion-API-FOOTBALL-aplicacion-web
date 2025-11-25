@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clasificación de Ligas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <img id="logo-liga" src="" alt="Logo Liga" class="liga-logo">
+        <div>
+          <h1>Clasificación de Ligas</h1>
+          <p class="sub">Fútbol Profesional · Datos API-FOOTBALL</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAV con ligas -->
+    <nav class="filters">
+
+      <!-- España -->
+      <button class="tab-btn active" data-liga="laliga">LaLiga</button>
+      <button class="tab-btn" data-liga="laliga2">LaLiga 2</button>
+      <button class="tab-btn" data-liga="primeraRF">Primera RFEF</button>
+
+      <!-- Big Five -->
+      <button class="tab-btn" data-liga="premier">Premier</button>
+      <button class="tab-btn" data-liga="seriea">Serie A</button>
+      <button class="tab-btn" data-liga="bundes">Bundesliga</button>
+      <button class="tab-btn" data-liga="ligue1">Ligue 1</button>
+      
+    </nav>
+
+    <main>
+      <section class="info-bar">
+        <p id="descripcion-filtro">Cargando LaLiga…</p>
+      </section>
+
+      <section class="tables-wrapper">
+
+        <!-- CLASIFICACIÓN -->
+        <div class="table-block">
+          <div class="table-block-header">
+            <h2>Clasificación</h2>
+            <span id="season-label" class="season-pill">—</span>
+          </div>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Equipo</th>
+                  <th>Pts</th>
+                  <th>PJ</th>
+                  <th>GF</th>
+                  <th>GC</th>
+                  <th>DG</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PARTIDOS -->
+        <div class="table-block">
+          <div class="table-block-header">
+            <h2>Próximos partidos / Últimos resultados</h2>
+            <span class="small-note">Máx. 10</span>
+          </div>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Local</th>
+                  <th></th>
+                  <th>Visitante</th>
+                  <th>Marcador</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-fixtures-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>Proyecto API-FOOTBALL – Alberto </p>
+    </footer>
+
+  </div>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

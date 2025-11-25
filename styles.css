@@ -1,0 +1,250 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: #050505;
+  color: #e8e8e8;
+}
+
+/* APP LAYOUT */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.topbar {
+  padding: 25px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand h1 {
+  font-size: 1.6rem;
+}
+
+.brand .sub {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.liga-logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 255, 80, 0.55);
+  border: 2px solid rgba(0, 255, 80, 0.6);
+  object-fit: cover;
+  background: #020202;
+}
+
+/* NAV */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 40px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #0c0c0c;
+  border: 2px solid #00ff3c;
+  color: #00ff3c;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 0.9rem;
+}
+
+.tab-btn:hover {
+  background: #00ff3c;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: #00ff3c;
+  color: #000;
+}
+
+/* INFO BAR */
+.info-bar {
+  padding: 10px 40px;
+  color: #00ff55;
+  font-weight: 700;
+}
+
+/* WRAPPER DE TABLAS */
+.tables-wrapper {
+  padding: 0 40px 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.1fr;
+  gap: 25px;
+}
+
+.table-block {
+  background: #080808;
+  border-radius: 16px;
+  padding: 18px 18px 10px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(0, 255, 60, 0.2);
+}
+
+.table-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-block-header h2 {
+  font-size: 1.1rem;
+}
+
+.season-pill {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #00ff40;
+  color: #00ff40;
+}
+
+.small-note {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* TABLE */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0b0b0b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background: #0f0f0f;
+}
+
+thead th {
+  padding: 12px;
+  color: #00ff40;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+tbody td {
+  padding: 11px 12px;
+  font-size: 0.86rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #0a0a0a;
+}
+
+tbody tr:hover {
+  background: #111;
+  transform: scale(1.01);
+}
+
+/* EQUIPOS / ESCUDOS */
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-logo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* FIXTURES */
+.fixture-team {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fixture-team img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fixture-date {
+  white-space: nowrap;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.fixture-status {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 18px;
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .tables-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .tab-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .topbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .tables-wrapper {
+    padding: 0 15px 30px;
+  }
+
+  table {
+    font-size: 0.78rem;
+  }
+}
